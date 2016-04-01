@@ -1,3 +1,10 @@
+#--------------------------------------------------------------------
+#
+#		Build scenario for cmake
+#		Dmitry Pritykin (maisvendoo) 01.04.2016
+#
+#--------------------------------------------------------------------
+
 # cmake minimal version
 cmake_minimum_required (VERSION 3.4)
 
@@ -19,3 +26,6 @@ add_executable(${PROJECT} ${SRC})
 
 # link libs
 target_link_libraries(${PROJECT} ${LIBS})
+
+#
+install (TARGETS ${PROJECT} DESTINATION bin)
