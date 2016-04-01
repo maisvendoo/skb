@@ -1,3 +1,4 @@
-bin/
-pkg/
+[Bb]in/
+[Pp]kg/
+[Bb]uild/
 *.o
