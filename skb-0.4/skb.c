@@ -92,9 +92,15 @@ main(int argc, char *argv[]){
     XkbSelectEvents(dpy, XkbUseCoreKbd, XkbAllEventsMask, XkbAllEventsMask);
     for(;;) {
         get_active_gr(dpy, &active);
-        if(active != old) {
-            puts(groups[active]);
-	    fflush(stdout);
+        if(active != old) 
+		{
+            //puts(groups[active]);
+			
+			putchar(groups[active][0]);
+			putchar(groups[active][1]);
+			putchar('\n');
+
+	    	fflush(stdout);
             old = active;
         }
 	if(argc > 1)
